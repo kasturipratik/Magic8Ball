@@ -11,7 +11,6 @@ public class Main {
         System.out.println("Magic 8 Ball Program\n::::::::::::::::::::::::::::::::::::::::::::::::::");
 
         System.out.println("\nPlease enter your question for a answer? Enter 'exit' to quit");
-        System.out.println("You Asked: ");
         question =scan.nextLine();
 
     while(!question.equals("exit")){
@@ -85,21 +84,20 @@ public class Main {
                     answer="Hi";
                     break;
             }
-            System.out.println("\nMagic 8-Ball Says :"+ answer);
+            System.out.println("\nYou Asked: "+ question);
+            System.out.println("Magic 8-Ball Says :"+ answer);
             System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+
             System.out.println("Do you Have another question for magic ball? (y/n)");
-            option = scan.next();
+            option = scan.nextLine();
             if(option.equals("y"))
             {
             System.out.println("\nPlease enter a Question for a answer? Enter 'exit' to quit");
-
-            System.out.println("You Asked: ");
-            question =scan.nextLine();
+            question=scan.nextLine();
         }
         else{
             question="exit";
             }
     }
         System.out.println("Thank You for using the application! Good Bye!!");
-    }
-}
+    }}
