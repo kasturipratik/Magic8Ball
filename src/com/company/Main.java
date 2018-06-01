@@ -6,11 +6,12 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        String answer,question;
+        String answer,question,option;
         Scanner scan = new Scanner(System.in);
         System.out.println("Magic 8 Ball Program\n::::::::::::::::::::::::::::::::::::::::::::::::::");
 
         System.out.println("\nPlease enter your question for a answer? Enter 'exit' to quit");
+        System.out.println("You Asked: ");
         question =scan.nextLine();
 
     while(!question.equals("exit")){
@@ -84,11 +85,21 @@ public class Main {
                     answer="Hi";
                     break;
             }
-            System.out.println("\nYour answer is :"+ answer);
+            System.out.println("\nMagic 8-Ball Says :"+ answer);
             System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-            System.out.println("\nPlease enter Another question for a answer? Enter 'exit' to quit");
+            System.out.println("Do you Have another question for magic ball? (y/n)");
+            option = scan.next();
+            if(option.equals("y"))
+            {
+            System.out.println("\nPlease enter a Question for a answer? Enter 'exit' to quit");
+
+            System.out.println("You Asked: ");
             question =scan.nextLine();
         }
+        else{
+            question="exit";
+            }
+    }
         System.out.println("Thank You for using the application! Good Bye!!");
     }
 }
